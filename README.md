@@ -17,6 +17,10 @@ Frankly, If I'm already going to the trouble of maintaining this sort of setup f
 
 And no, this tap will never be used for anything other than Chromium.
 
+Alas, due to the Chromium upstream [download link](https://commondatastorage.googleapis.com/chromium-browser-snapshots/index.html) being curl & wget unfriendly, I’m having to pull the download from my mirror. If someone can find a way to get around having to do that, I’m open to suggestions!
+
+No Linux support for now. If there’s demand for it I may look at trying to work in Linux support. Only OS X for now.
+
 How do I tap this repository?
 --------------------------------
 Just `brew tap domt4/chromium`.
