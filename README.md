@@ -15,7 +15,7 @@ No, I'm not joking.
 
 Frankly, If I'm already going to the trouble of maintaining this sort of setup for me I may as well make it easier for everyone else as well.
 
-And no, this tap will never be used for anything other than Chromium.
+And no, this tap will never be used for anything other than Chromium. 
 
 Alas, due to the Chromium upstream [download link](https://commondatastorage.googleapis.com/chromium-browser-snapshots/index.html) being curl & wget unfriendly, I’m having to pull the download from my mirror. If someone can find a way to get around having to do that, I’m open to suggestions!
 
