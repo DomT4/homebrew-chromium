@@ -5,24 +5,22 @@ Chromium Snapshots Delivered Through Homebrew!
 
 ------
 
-Yes, the [Caskroom/Brew-Cask](https://github.com/caskroom/homebrew-cask) does this sort of thing too, but they distribute the portable, flash-enabled version of Chromium.
+Yes, the [Caskroom/Brew-Cask](https://github.com/caskroom/homebrew-cask) does this sort of thing too.
 
-I'm not interested in Flash.
+However, when I created this repository they distributed the Portable, Flash-enabled version of Chromium and I didn’t want or need that.
 
-I also like my Chromium fresh off the press, direct from upstream, with no auto-updating method or any guarantee of not crashing horribly.
+In early November the Caskroom switched to using the direct downloads from the Appspot blog, but due to the nature of these downloads the Caskroom also disabled checksumming of that file for integrity, and I’d rather not punt that kind of risk when rocking a browser.
 
-No, I'm not joking.
+My method here allows myself or anyone to go back upstream, check the commit reference, download that binary zip themselves and checksum it. It also ensures that said binary did not change in transit between my Github mirror and arriving at Bert, Fred or Sandra’s Mac.
 
-Frankly, If I'm already going to the trouble of maintaining this sort of setup for me I may as well make it easier for everyone else as well.
+In the end, I’ve traded convenience for very slightly greater security, and I accept that compromise. If anyone else desires to, this repository is here for all.
 
-And no, this tap will never be used for anything other than Chromium. 
+And nope, this tap will never be used for anything other than Chromium. 
 
 Alas, due to the Chromium upstream [download link](https://commondatastorage.googleapis.com/chromium-browser-snapshots/index.html) being curl & wget unfriendly, I’m having to pull the download from my mirror. If someone can find a way to get around having to do that, I’m open to suggestions!
-
-No Linux support for now. If there’s demand for it I may look at trying to work in Linux support. Only OS X for now.
 
 How do I tap this repository?
 --------------------------------
 Just `brew tap domt4/chromium`.
 
-It really is that simple. Yay! Fresh Chromium delivered as regularly as they push it. Like bread, but less edible.
+It really is that simple. Yay! Fresh Chromium delivered regularly. Like bread, but less edible.
