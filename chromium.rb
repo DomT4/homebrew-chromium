@@ -2,9 +2,9 @@ require "formula"
 
 class Chromium < Formula
    homepage "https://www.chromium.org/"
-   url "https://raw.githubusercontent.com/DomT4/LibreMirror/master/Chromium/Mac_306025_chrome-mac.zip"
-   version "c306025"
-   sha256 "a4e022d33cb8dba5d53f78a5ea8fef5275c3072832f4c1968347d5e96fb263fd"
+   url "https://raw.githubusercontent.com/DomT4/LibreMirror/master/Chromium/Mac_306113_chrome-mac.zip"
+   version "c306113"
+   sha256 "24ed58bf996a6e50acef8fdc7791ca1aeaca7b91fa7ba76dd7dff9551ec50cbf"
 
   # Why are we using your mirror instead of the core download link?
   # Answer - Because the core download link isn't wget or curl friendly.
