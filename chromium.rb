@@ -1,11 +1,11 @@
 class Chromium < Formula
   desc "Open-source web browser"
   homepage "https://www.chromium.org/getting-involved/download-chromium"
-  url "https://www.googleapis.com/download/storage/v1/b/chromium-browser-snapshots/o/Mac%2F385001%2Fchrome-mac.zip?generation=1459805172811000&alt=media"
-  version "c385001"
-  sha256 "40182e99a0facba88a3c051ff5cc5ddafeb35c25271d1d74eaa9d6fd72f45899"
+  url "https://www.googleapis.com/download/storage/v1/b/chromium-browser-snapshots/o/Mac%2F387591%2Fchrome-mac.zip?generation=1460730997870000&alt=media"
+  version "c387591"
+  sha256 "fe28fa87221710866d413e767bf5e0062eb8e4153f9ae83d5ef8f6a538a8e5a8"
 
-  option "with-exec-script", "Installs an exec script for easy CLI opening of Chromium"
+  option "with-exec-script", "Install a script for easy CLI opening of Chromium"
 
   def install
     libexec.install "Chromium.app"
