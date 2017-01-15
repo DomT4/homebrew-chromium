@@ -23,15 +23,18 @@ class Chromium < Formula
   def caveats; <<-EOS.undent
     Homebrew has chosen to deprecate the linkapps function, which is a step
     towards killing the usefulness and support of installing .apps through
-    Homebrew formulae completely.
+    Homebrew formulae completely. I strongly disagree with removing app
+    functionality through Homebrew formulae but the decision is out of my
+    hands these days, sorry.
 
     You can work around this once linkapps stops functioning by doing:
       cp -rf #{opt_libexec}/Chromium.app /Applications
-    Or simply start using the sha256-verified Cask I've added to this tap:
+    Or start using the sha256-verified Cask I've added to this tap:
       brew cask install mac-chromium
 
-    I strongly disagree with removing app functionality through Homebrew
-    formulae but the decision is out of my hands these days, sorry.
+    Please note that Homebrew currently has no automatic upgrade functionality
+    for casks, so if you go down that route you will need to periodically run:
+      brew cask reinstall mac-chromium
   EOS
   end
 end
