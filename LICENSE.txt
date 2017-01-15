@@ -1,4 +1,4 @@
-Copyright 2014-2016 Dominyk Tiller & all DomT4/homebrew-chromium contributors.
+Copyright 2014- Dominyk Tiller & all DomT4/homebrew-chromium contributors.
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions
