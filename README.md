@@ -3,7 +3,7 @@ Chromium Snapshots Delivered Through Homebrew!
 
 How do I tap this repository?
 --------------------------------
-Just `brew tap domt4/chromium`.
+Just `brew tap domt4/homebrew-chromium`.
 
 It really is that simple. Yay! Fresh Chromium delivered regularly. Like bread,
 but less edible.
