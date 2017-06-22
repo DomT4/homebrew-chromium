@@ -1,9 +1,9 @@
 class Chromium < Formula
   desc "Open-source web browser"
   homepage "https://www.chromium.org/getting-involved/download-chromium"
-  url "https://www.googleapis.com/download/storage/v1/b/chromium-browser-snapshots/o/Mac%2F478520%2Fchrome-mac.zip?generation=1497126753625638&alt=media"
-  version "c478520"
-  sha256 "e0d793b0ae103c3485e08619d8b37a93ea3f3de238a393a21697b9a56a7cd3b1"
+  url "https://www.googleapis.com/download/storage/v1/b/chromium-browser-snapshots/o/Mac%2F481543%2Fchrome-mac.zip?generation=1498147885667744&alt=media"
+  version "c481543"
+  sha256 "d84883b5d09bafab9730b8fba9c95ad568be89c46d7715ec31fa363a7d339e1e"
 
   option "with-exec-script", "Install a script for easy CLI opening of Chromium"
 
@@ -16,7 +16,7 @@ class Chromium < Formula
         #!/usr/bin/env bash
         exec open -a "Chromium" "$@"
       EOS
-      exec_script.chmod 0755
+      exec_script.chmod 0555
     end
   end
 
