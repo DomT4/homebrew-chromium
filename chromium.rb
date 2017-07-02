@@ -1,9 +1,9 @@
 class Chromium < Formula
   desc "Open-source web browser"
   homepage "https://www.chromium.org/getting-involved/download-chromium"
-  url "https://www.googleapis.com/download/storage/v1/b/chromium-browser-snapshots/o/Mac%2F481543%2Fchrome-mac.zip?generation=1498147885667744&alt=media"
-  version "c481543"
-  sha256 "d84883b5d09bafab9730b8fba9c95ad568be89c46d7715ec31fa363a7d339e1e"
+  url "https://www.googleapis.com/download/storage/v1/b/chromium-browser-snapshots/o/Mac%2F483920%2Fchrome-mac.zip?generation=1498987283319977&alt=media"
+  version "c483920"
+  sha256 "b0538f8845100b3c80ec57b43cf84b7031ff1b2aaf2f19d426513a2b975db41f"
 
   option "with-exec-script", "Install a script for easy CLI opening of Chromium"
 
