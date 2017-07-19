@@ -1,9 +1,9 @@
 class Chromium < Formula
   desc "Open-source web browser"
   homepage "https://www.chromium.org/getting-involved/download-chromium"
-  url "https://www.googleapis.com/download/storage/v1/b/chromium-browser-snapshots/o/Mac%2F485424%2Fchrome-mac.zip?generation=1499727345775290&alt=media"
-  version "c485424"
-  sha256 "ab05a8d1973aa8917c9722ff69f24dca45cb06c234d6f4aa84355ade0d287a65"
+  url "https://www.googleapis.com/download/storage/v1/b/chromium-browser-snapshots/o/Mac%2F487848%2Fchrome-mac.zip?generation=1500474532446604&alt=media"
+  version "c487848"
+  sha256 "9856b1ea03a9a83018fded30a25074e05e62b3035196c01fdc19ef5b756c1aa8"
 
   option "with-exec-script", "Install a script for easy CLI opening of Chromium"
 
@@ -23,9 +23,7 @@ class Chromium < Formula
   def caveats; <<-EOS.undent
     Homebrew has chosen to deprecate the linkapps function, which is a step
     towards killing the usefulness and support of installing .apps through
-    Homebrew formulae completely. I strongly disagree with removing app
-    functionality through Homebrew formulae but the decision is out of my
-    hands, sorry.
+    Homebrew formulae completely. That decision is out of my hands, sorry.
 
     You can work around this once linkapps stops functioning by doing:
       cp -rf #{opt_libexec}/Chromium.app /Applications
