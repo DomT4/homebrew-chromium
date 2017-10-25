@@ -35,4 +35,8 @@ class Chromium < Formula
       brew cask reinstall mac-chromium
   EOS
   end
+
+  test do
+    assert_predicate libexec/"Chromium.app/Contents/MacOS/Chromium", :exist?
+  end
 end
