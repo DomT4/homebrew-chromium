@@ -12,7 +12,7 @@ class Chromium < Formula
 
     if build.with? "exec-script"
       exec_script = bin/"chromium"
-      exec_script.write <<-EOS.undent
+      exec_script.write <<~EOS
         #!/usr/bin/env bash
         exec open -a "Chromium" "$@"
       EOS
@@ -20,7 +20,7 @@ class Chromium < Formula
     end
   end
 
-  def caveats; <<-EOS.undent
+  def caveats; <<~EOS
     Homebrew has chosen to deprecate the linkapps function, which is a step
     towards killing the usefulness and support of installing .apps through
     Homebrew formulae completely. That decision is out of my hands, sorry.
