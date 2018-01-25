@@ -1,9 +1,9 @@
 class Chromium < Formula
   desc "Open-source web browser"
   homepage "https://www.chromium.org/getting-involved/download-chromium"
-  url "https://www.googleapis.com/download/storage/v1/b/chromium-browser-snapshots/o/Mac%2F531778%2Fchrome-mac.zip?generation=1516846583330520&alt=media"
-  version "c531778"
-  sha256 "95170c339b5be28e651532e0177d39f08502f93c6ca42dae9f38862d5dc49e07"
+  url "https://www.googleapis.com/download/storage/v1/b/chromium-browser-snapshots/o/Mac%2F531796%2Fchrome-mac.zip?generation=1516849734410675&alt=media"
+  version "c531796"
+  sha256 "8a973ce53bd8fecd6b325fc794b07c292f85eda125756a815ac06141743ef0f1"
 
   option "with-exec-script", "Install a script for easy CLI opening of Chromium"
 
@@ -21,11 +21,9 @@ class Chromium < Formula
   end
 
   def caveats; <<~EOS
-    Homebrew has chosen to deprecate the linkapps function, which is a step
-    towards killing the usefulness and support of installing .apps through
-    Homebrew formulae completely. That decision is out of my hands, sorry.
+    Linkapps has been deprecated by Homebrew.
 
-    You can work around this once linkapps stops functioning by doing:
+    You can either copy Chromium to Applications:
       cp -rf #{opt_libexec}/Chromium.app /Applications
     Or start using the sha256-verified Cask I've added to this tap:
       brew cask install mac-chromium
