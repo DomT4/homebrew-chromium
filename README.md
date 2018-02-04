@@ -4,7 +4,7 @@
 
 ```
 brew install domt4/chromium/chromium
-brew linkapps chromium
+cp -rf $(brew --prefix chromium)/libexec/Chromium.app /Applications
 ```
 
 And then updates will be picked up in the normal way:
@@ -22,14 +22,7 @@ here.
 
 ## Handling Homebrew's deprecation of linkapps
 
-Without getting into Homebrew politics I think this is a fairly backwards move
-by Homebrew, especially given there is no way to upgrade a Cask
-[currently](https://github.com/Homebrew/brew/pull/1523) without manually
-reinstalling it. I have added some caveats to `brew info chromium` about the
-two potential ways to handle it if you wish to remain with this tap once
-`linkapps` is removed entirely at some future date.
-
-Nonetheless, if people wish to use the Cask version of the formula in this tap
+If people wish to use the Cask version of the formula in this tap
 I have added one, which you can install via `brew cask install mac-chromium`.
 Please note that you will need to `brew cask reinstall mac-chromium`
 periodically until Homebrew upstream work out some auto-update mechanism.
