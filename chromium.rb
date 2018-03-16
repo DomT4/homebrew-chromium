@@ -1,14 +1,14 @@
 class Chromium < Formula
   desc "Open-source web browser"
   homepage "https://www.chromium.org/getting-involved/download-chromium"
-  url "https://www.googleapis.com/download/storage/v1/b/chromium-browser-snapshots/o/Mac%2F539987%2Fchrome-mac.zip?generation=1519872030291812&alt=media"
-  version "c539987"
-  sha256 "680e2be4ffac436f9fc4257b3f5815f3b13d535e0c2a46576397430d210d4375"
+  url "https://www.googleapis.com/download/storage/v1/b/chromium-browser-snapshots/o/Mac%2F543623%2Fchrome-mac.zip?generation=1521176122855970&alt=media"
+  version "c543623"
+  sha256 "20195694c4032349bcfb257db2f3729e0f55417190584ccd9129451df658158f"
 
   option "with-exec-script", "Install a script for easy CLI opening of Chromium"
 
   def install
-    libexec.install "Chromium.app"
+    prefix.install "Chromium.app"
 
     if build.with? "exec-script"
       exec_script = bin/"chromium"
@@ -24,7 +24,7 @@ class Chromium < Formula
     Linkapps has been deprecated by Homebrew.
 
     You can either copy Chromium to Applications:
-      cp -rf #{opt_libexec}/Chromium.app /Applications
+      cp -rf #{opt_prefix}/Chromium.app /Applications
     Or start using the sha256-verified Cask I've added to this tap:
       brew cask install mac-chromium
 
@@ -35,6 +35,6 @@ class Chromium < Formula
   end
 
   test do
-    assert_predicate libexec/"Chromium.app/Contents/MacOS/Chromium", :exist?
+    assert_predicate prefix/"Chromium.app/Contents/MacOS/Chromium", :exist?
   end
 end
