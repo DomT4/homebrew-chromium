@@ -24,8 +24,8 @@ here.
 
 If people wish to use the Cask version of the formula in this tap
 I have added one, which you can install via `brew cask install mac-chromium`.
-Please note that you will need to `brew cask reinstall mac-chromium`
-periodically until Homebrew upstream work out some auto-update mechanism.
+Please note that you will need to `brew cask upgrade mac-chromium`
+periodically.
 
 ## Duplication of the Caskroom's Chromium
 
