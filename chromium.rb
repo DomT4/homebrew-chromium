@@ -28,9 +28,9 @@ class Chromium < Formula
     Or start using the sha256-verified Cask I've added to this tap:
       brew cask install mac-chromium
 
-    Please note that Homebrew currently has no automatic upgrade functionality
-    for casks, so if you go down that route you will need to periodically run:
-      brew cask reinstall mac-chromium
+    Please note that if you go down that route you will need to periodically
+    run:
+      brew cask upgrade mac-chromium
   EOS
   end
 
