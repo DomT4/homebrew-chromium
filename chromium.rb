@@ -1,14 +1,15 @@
 class Chromium < Formula
   desc "Open-source web browser"
   homepage "https://www.chromium.org/getting-involved/download-chromium"
-  url "https://www.googleapis.com/download/storage/v1/b/chromium-browser-snapshots/o/Mac%2F579555%2Fchrome-mac.zip?generation=1533073332537443&alt=media"
-  version "c579555"
-  sha256 "ce6ec8c693b6fc6bda602df02d4495dd0353cae0889470641a05cf2232ea1543"
+  url "https://www.googleapis.com/download/storage/v1/b/chromium-browser-snapshots/o/Mac%2F582625%2Fchrome-mac.zip?generation=1534185962625793&alt=media", :using => :nounzip
+  version "c582625"
+  sha256 "6c0778b4e0a74dd7d3cfa444d30a7f8369b8f2b53cabf7c855b7b0155417678d"
 
   option "with-exec-script", "Install a script for easy CLI opening of Chromium"
 
   def install
-    prefix.install "Chromium.app"
+    system "unzip", Dir["*.zip"].first
+    prefix.install "chrome-mac/Chromium.app"
 
     if build.with? "exec-script"
       exec_script = bin/"chromium"
