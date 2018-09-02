@@ -1,8 +1,8 @@
 cask "mac-chromium" do
-  version "c582625"
-  sha256 "6c0778b4e0a74dd7d3cfa444d30a7f8369b8f2b53cabf7c855b7b0155417678d"
+  version "c588296"
+  sha256 "8864a5833dd6c4206c520b279e01a0394b60d74b8a2279737b96698fe1bc7991"
 
-  url "https://www.googleapis.com/download/storage/v1/b/chromium-browser-snapshots/o/Mac%2F582625%2Fchrome-mac.zip?generation=1534185962625793&alt=media"
+  url "https://www.googleapis.com/download/storage/v1/b/chromium-browser-snapshots/o/Mac%2F588296%2Fchrome-mac.zip?generation=1535853564401007&alt=media"
   name "Mac-Chromium"
   homepage "https://www.chromium.org/"
   conflicts_with cask: "chromium"
