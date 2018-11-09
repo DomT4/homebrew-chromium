@@ -2,14 +2,13 @@
 
 ## How to install Chromium from this tap
 
-```
+```bash
 brew install domt4/chromium/chromium
-cp -rf $(brew --prefix chromium)/libexec/Chromium.app /Applications
 ```
 
 And then updates will be picked up in the normal way:
 
-```
+```bash
 brew update
 brew upgrade
 ```
