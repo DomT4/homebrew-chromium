@@ -2,8 +2,16 @@
 
 ## How to install Chromium from this tap
 
+*via Formula:*
+
 ```bash
 brew install domt4/chromium/chromium
+```
+
+*via Cask:*
+
+```bash
+brew cask install domt4/chromium/mac-chromium
 ```
 
 And then updates will be picked up in the normal way:
@@ -15,34 +23,29 @@ brew upgrade
 
 ## Chrome Release Channel Tracking
 
-It's not a completely hard rule but I try not to deviate too far from the
-Canary channel. Generally updates will be no further apart than 14 days
-here.
+Generally updates will be no further apart than 14 days here. The aim is
+to update infrequently enough to provide some stability whilst not updating so
+infrequently that this tap slips behind important/interesting security/feature
+releases.
 
-## Handling Homebrew's deprecation of linkapps
+## Duplication of Homebrew Cask's Chromium
 
-If people wish to use the Cask version of the formula in this tap
-I have added one, which you can install via `brew cask install mac-chromium`.
-Please note that you will need to `brew cask upgrade mac-chromium`
-periodically.
+When I created this repository Homebrew Cask distributed the portable,
+Flash-enabled version of Chromium and I didn’t want to use/support Flash
+and its myriad of frequent security issues so I created this tap instead.
 
-## Duplication of the Caskroom's Chromium
-
-When I created this repository the Caskroom distributed the portable,
-Flash-enabled version of Chromium and I didn’t want that so I created this
-tap instead.
-
-In early November 2014 the Caskroom switched to using the direct downloads
-from the Appspot blog, but due to the nature of these downloads the Caskroom
+In November 2014 Homebrew Cask switched to using the direct downloads
+from the Appspot blog, but due to the nature of these downloads Homebrew Cask
 also disabled checksum verification of that cask, which isn't a risk I was
-happy taking, personally.
+happy taking.
 
-The Caskroom’s cask also makes it painful for people to remain on up-to-date
-Chromium versions, as Chromium ships with no built-in update method.
+In [early 2019](https://github.com/Homebrew/homebrew-cask/commit/7af98a34ae)
+Homebrew Cask moved to checksummed and versioned Chromium releases,
+nigh identically to the way this tap was setup to support. The Cask in this
+tap has been updated with caveats on how to migrate over if people wish to,
+but this tap will remain supported for the foreseeable.
 
 ## Misc
 
-This tap will never be used for anything other than Chromium.
-
-For fun: When I started this repository on October the 8th 2014 Chromium was on
-Commit Number 298608. Compare that to where we are today (!).
+When I started this repository on October 8th 2014 Chromium was on
+Commit Number 298608.
