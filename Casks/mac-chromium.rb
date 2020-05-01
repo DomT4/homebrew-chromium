@@ -1,14 +1,33 @@
 cask "mac-chromium" do
-  version "c759264"
-  sha256 "33c1c577a6bc9346fb398e97ef3138749c4d678fa6adeb9ec77198e0b6fed2c7"
+  version "c764682"
+  sha256 "4d74cd0d8c2e08f0721bbe431f95b57a703fb536f983318a22da9dc3911db2c6"
 
-  url "https://www.googleapis.com/download/storage/v1/b/chromium-browser-snapshots/o/Mac%2F759264%2Fchrome-mac.zip?generation=1586965987891322&alt=media"
+  url "https://commondatastorage.googleapis.com/chromium-browser-snapshots/Mac/#{version.gsub("c", "")}/chrome-mac.zip"
   name "Mac-Chromium"
   homepage "https://www.chromium.org/"
   conflicts_with cask: "chromium"
 
   app "chrome-mac/Chromium.app"
-  binary "#{appdir}/Chromium.app/Contents/MacOS/Chromium", target: "chromium"
+
+  shimscript = "#{staged_path}/chromium.wrapper.sh"
+  binary shimscript, target: "chromium"
+
+  preflight do
+    IO.write shimscript, <<~EOS
+      #!/bin/sh
+      '#{appdir}/Chromium.app/Contents/MacOS/Chromium' "$@"
+    EOS
+  end
+
+  caveats <<~EOS
+    As of https://github.com/Homebrew/homebrew-cask/commit/7af98a34ae
+    Homebrew Cask has moved to a checksummed and versioned Chromium cask.
+
+    If you wish to migrate you can:
+      brew cask uninstall mac-chromium && brew cask install chromium
+
+    This tap will remain supported for the foreseeable.
+  EOS
 
   zap delete: [
                 "~/Library/Preferences/org.chromium.Chromium.plist",
