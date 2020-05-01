@@ -1,4 +1,4 @@
-xclass Chromium < Formula
+class Chromium < Formula
   desc "Open-source web browser"
   homepage "https://www.chromium.org/getting-involved/download-chromium"
   url "https://www.googleapis.com/download/storage/v1/b/chromium-browser-snapshots/o/Mac%2F764682%2Fchrome-mac.zip?generation=1588353889919349&alt=media", :using => :nounzip
