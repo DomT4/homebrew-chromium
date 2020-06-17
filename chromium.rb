@@ -11,6 +11,34 @@ class Chromium < Formula
     system "unzip", Dir["*.zip"].first
     prefix.install "chrome-mac/Chromium.app"
 
+    install_chrome = libexec/"install-chrome"
+    install_chrome.write <<~EOS
+      #!/usr/bin/env bash
+      if [ ! -w "/Applications" ]; then
+        echo "/Applications must be writable for this script to work"
+        exit 1
+      fi
+
+      if [ ! -d "#{prefix}/Chromium.app" ]; then
+        echo "Chromium has already been moved from #{opt_prefix}!"
+        exit 1
+      fi
+
+      FILE="/Applications/Chromium.app"
+      if [ -d "$FILE" ]; then
+        echo "Removing old Chromium app"
+        rm -rf "$FILE"
+      fi
+
+      mv #{prefix}/Chromium.app /Applications
+      if [ -d "$FILE" ]; then
+        echo "Chromium has been successfully moved to /Applications"
+      else
+        echo "Failed to move Chromium!"
+      fi
+    EOS
+    install_chrome.chmod 0555
+
     if build.with? "exec-script"
       exec_script = bin/"chromium"
       exec_script.write <<~EOS
@@ -21,21 +49,23 @@ class Chromium < Formula
     end
   end
 
-  def caveats; <<~EOS
-    Linkapps has been deprecated by Homebrew.
+  def caveats
+    <<~EOS
+      Linkapps has been deprecated by Homebrew.
 
-    You can either copy Chromium to Applications:
-      cp -rf #{opt_prefix}/Chromium.app /Applications
-    Or start using the sha256-verified Cask I've added to this tap:
-      brew cask install mac-chromium
+      You can either move Chromium to Applications manually or
+      with the provided installation script:
+        #{opt_libexec}/install-chrome
+      Or start using the sha256-verified Cask I've added to this tap:
+        brew cask install mac-chromium
 
-    Please note that if you go down that route you will need to periodically
-    run:
-      brew cask upgrade mac-chromium
-  EOS
+      Please note that if you go down that route you will need to
+      periodically run:
+        brew cask upgrade mac-chromium
+    EOS
   end
 
   test do
-    assert_predicate prefix/"Chromium.app/Contents/MacOS/Chromium", :exist?
+    assert_predicate libexec/"install-chrome", :exist?
   end
 end
