@@ -2,7 +2,7 @@ class Chromium < Formula
   desc "Open-source web browser"
   homepage "https://www.chromium.org/getting-involved/download-chromium"
   url "https://www.googleapis.com/download/storage/v1/b/chromium-browser-snapshots/o/Mac%2F871523%2Fchrome-mac.zip?generation=1618251239211665&alt=media",
-      :using => :nounzip
+      using: :nounzip
   version "c871523"
   sha256 "68884b41216c1dd194df6361c9f58aa887051e3cae37fc1d13f0baaa8925e569"
 
