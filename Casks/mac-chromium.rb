@@ -1,9 +1,18 @@
 cask "mac-chromium" do
-  version "c871523"
-  sha256 "68884b41216c1dd194df6361c9f58aa887051e3cae37fc1d13f0baaa8925e569"
+  if Hardware::CPU.arm?
+    version "c892360"
+    url "https://commondatastorage.googleapis.com/chromium-browser-snapshots/Mac_Arm/#{version.delete("c")}/chrome-mac.zip",
+         verified: "commondatastorage.googleapis.com/chromium-browser-snapshots/Mac_Arm/"
+    sha256 "881b003f86372ac01c301a2d7a5e49b417d46c2a2271a472692b33ad167f017d"
+  else
+    version "c892345"
+    url "https://commondatastorage.googleapis.com/chromium-browser-snapshots/Mac/#{version.delete("c")}/chrome-mac.zip",
+         verified: "commondatastorage.googleapis.com/chromium-browser-snapshots/Mac/"
+    sha256 "d57bb848617184724d33937123b3cbb3a6babf282e4ed884ceadace581a3f0f0"
+  end
 
-  url "https://commondatastorage.googleapis.com/chromium-browser-snapshots/Mac/#{version.delete("c")}/chrome-mac.zip"
   name "Mac-Chromium"
+  desc "Free and open-source web browser"
   homepage "https://www.chromium.org/"
 
   conflicts_with cask: "chromium"
@@ -19,10 +28,10 @@ cask "mac-chromium" do
     EOS
   end
 
-  zap delete: [
-    "~/Library/Preferences/org.chromium.Chromium.plist",
-    "~/Library/Caches/Chromium",
+  zap trash: [
     "~/Library/Application Support/Chromium",
+    "~/Library/Caches/Chromium",
+    "~/Library/Preferences/org.chromium.Chromium.plist",
     "~/Library/Saved Application State/org.chromium.Chromium.savedState",
   ]
 
