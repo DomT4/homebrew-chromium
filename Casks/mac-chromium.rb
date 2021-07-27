@@ -1,14 +1,14 @@
 cask "mac-chromium" do
   if Hardware::CPU.arm?
-    version "c892360"
+    version "c905897"
     url "https://commondatastorage.googleapis.com/chromium-browser-snapshots/Mac_Arm/#{version.delete("c")}/chrome-mac.zip",
          verified: "commondatastorage.googleapis.com/chromium-browser-snapshots/Mac_Arm/"
-    sha256 "881b003f86372ac01c301a2d7a5e49b417d46c2a2271a472692b33ad167f017d"
+    sha256 "3973b66a839a88a29d743b12af697c96e0e0582be66fdd2b8ef2330074d93009"
   else
-    version "c892345"
+    version "c905898"
     url "https://commondatastorage.googleapis.com/chromium-browser-snapshots/Mac/#{version.delete("c")}/chrome-mac.zip",
          verified: "commondatastorage.googleapis.com/chromium-browser-snapshots/Mac/"
-    sha256 "d57bb848617184724d33937123b3cbb3a6babf282e4ed884ceadace581a3f0f0"
+    sha256 "9b0f8ba5c39526dd7a0ffe3b0da5e5d9f93fb6b7e2e4e999250200400030fba9"
   end
 
   name "Mac-Chromium"
