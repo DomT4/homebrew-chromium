@@ -3,15 +3,15 @@ class Chromium < Formula
   homepage "https://www.chromium.org/getting-involved/download-chromium"
 
   if Hardware::CPU.arm?
-    url "https://www.googleapis.com/download/storage/v1/b/chromium-browser-snapshots/o/Mac_Arm%2F939171%2Fchrome-mac.zip?generation=1636304503718664&alt=media",
+    url "https://www.googleapis.com/download/storage/v1/b/chromium-browser-snapshots/o/Mac_Arm%2F977407%2Fchrome-mac.zip?generation=1646354636436034&alt=media",
         using: :nounzip
-    sha256 "c09a83e631ec60f3da1b2b5ba94bc77ebf8c8c4536496dc51dbca4cd143bbbb1"
-    version "c939171"
+    sha256 "05302ffaabb3d497542754ad6984f9f5e00516caafc363759f2318e2cc9188cb"
+    version "c977407"
   else
-    url "https://www.googleapis.com/download/storage/v1/b/chromium-browser-snapshots/o/Mac%2F939171%2Fchrome-mac.zip?generation=1636303686265501&alt=media",
+    url "https://www.googleapis.com/download/storage/v1/b/chromium-browser-snapshots/o/Mac%2F977406%2Fchrome-mac.zip?generation=1646354032616660&alt=media",
         using: :nounzip
-    sha256 "64927df01858717737a924e78815ef772bd0a2ab07a6c26fd4e46f8d0c1701a9"
-    version "c939171"
+    sha256 "3c642e11f7df388a2ac26cb8b190a8eac6d4d308bbb02b1a0e7b7d8602ae31c3"
+    version "c977406"
   end
 
   option "with-exec-script", "Install a script for easy CLI opening of Chromium"
