@@ -43,7 +43,7 @@ In [early 2019](https://github.com/Homebrew/homebrew-cask/commit/7af98a34ae)
 Homebrew Cask moved to checksummed and versioned Chromium releases,
 nigh identically to the way this tap was setup to support. The Cask in this
 tap has been updated with caveats on how to migrate over if people wish to,
-but this tap will remain supported for the foreseeable.
+but this tap will remain semi-supported for the foreseeable.
 
 ## Misc
 
